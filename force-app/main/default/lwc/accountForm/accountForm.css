@@ -1,0 +1,131 @@
+/* Account Form Component Styles */
+
+.slds-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slds-card__header {
+    background: linear-gradient(135deg, #1589EE 0%, #0D69A3 100%);
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.slds-card__header .slds-card__header-title {
+    color: white;
+    font-weight: 600;
+}
+
+/* Form field styling */
+.slds-form-element__label {
+    font-weight: 600;
+    color: #3E3E3C;
+}
+
+.slds-input,
+.slds-textarea,
+.slds-select {
+    border-radius: 4px;
+    border: 1px solid #D8DDE6;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.slds-input:focus,
+.slds-textarea:focus,
+.slds-select:focus {
+    border-color: #1589EE;
+    box-shadow: 0 0 0 2px rgba(21, 137, 238, 0.1);
+}
+
+/* Button styling */
+.slds-button_brand {
+    background: linear-gradient(135deg, #1589EE 0%, #0D69A3 100%);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.slds-button_brand:hover {
+    background: linear-gradient(135deg, #0D69A3 0%, #005FB2 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slds-button_neutral {
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.slds-button_neutral:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Success message styling */
+.slds-text-color_success {
+    color: #04844B !important;
+    font-weight: 600;
+    padding: 12px;
+    background-color: #F3F9F4;
+    border: 1px solid #91DB8B;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Error message styling */
+.slds-text-color_error {
+    color: #C23934 !important;
+    font-weight: 600;
+    padding: 12px;
+    background-color: #FEF7F7;
+    border: 1px solid #FED5D3;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .slds-col {
+        padding: 0.25rem;
+    }
+    
+    .slds-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .slds-button:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Form container styling */
+.slds-p-horizontal_medium {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Grid spacing */
+.slds-gutters .slds-col {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Card animation */
+.slds-card {
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
