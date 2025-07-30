@@ -1,0 +1,98 @@
+<template>
+    <lightning-card title="Create Account" icon-name="standard:account">
+        <div class="slds-p-horizontal_medium">
+            <lightning-record-edit-form 
+                object-api-name="Account" 
+                onsubmit={handleSubmit}
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+                
+                <div class="slds-grid slds-wrap slds-gutters">
+                    <!-- Account Name -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input-field 
+                            field-name="Name" 
+                            required>
+                        </lightning-input-field>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input-field 
+                            field-name="Phone">
+                        </lightning-input-field>
+                    </div>
+                    
+                    <!-- Website -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input-field 
+                            field-name="Website">
+                        </lightning-input-field>
+                    </div>
+                    
+                    <!-- Industry -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input-field 
+                            field-name="Industry">
+                        </lightning-input-field>
+                    </div>
+                    
+                    <!-- Type -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input-field 
+                            field-name="Type">
+                        </lightning-input-field>
+                    </div>
+                    
+                    <!-- Annual Revenue -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <lightning-input-field 
+                            field-name="AnnualRevenue">
+                        </lightning-input-field>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="slds-col slds-size_1-of-1">
+                        <lightning-input-field 
+                            field-name="Description">
+                        </lightning-input-field>
+                    </div>
+                </div>
+                
+                <div class="slds-m-top_medium slds-text-align_center">
+                    <lightning-button 
+                        type="submit" 
+                        label="Save Account" 
+                        variant="brand"
+                        class="slds-m-right_small">
+                    </lightning-button>
+                    <lightning-button 
+                        type="reset" 
+                        label="Reset" 
+                        variant="neutral">
+                    </lightning-button>
+                </div>
+                
+            </lightning-record-edit-form>
+        </div>
+        
+        <!-- Success/Error Messages -->
+        <template if:true={showSuccessMessage}>
+            <div class="slds-m-around_medium">
+                <lightning-formatted-text 
+                    value={successMessage}
+                    class="slds-text-color_success">
+                </lightning-formatted-text>
+            </div>
+        </template>
+        
+        <template if:true={showErrorMessage}>
+            <div class="slds-m-around_medium">
+                <lightning-formatted-text 
+                    value={errorMessage}
+                    class="slds-text-color_error">
+                </lightning-formatted-text>
+            </div>
+        </template>
+    </lightning-card>
+</template>

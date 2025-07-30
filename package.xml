@@ -92,5 +92,17 @@
     <members>*</members>
     <name>Workflow</name>
   </types>
+  <types>
+    <members>*</members>
+    <name>LightningComponentBundle</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>CustomObject</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Layout</name>
+  </types>
   <version>59.0</version>
 </Package>
